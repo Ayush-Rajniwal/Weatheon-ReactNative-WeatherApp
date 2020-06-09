@@ -1,7 +1,7 @@
 # Weatheon - React Native Weather App
 
 <p align="center">
-  <img width="720" heigh="1520" src="./static/preview.gif">
+ <img width="200" heigh="500" src="./static/preview.gif">
 </p>
 
 ## Download link
