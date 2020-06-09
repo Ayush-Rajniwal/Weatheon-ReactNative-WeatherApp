@@ -1,12 +1,14 @@
 # Weatheon - React Native Weather App
 
+A minimal weather app crafted using React Native.
+
 <p align="center">
  <img width="200" heigh="500" src="./static/preview.gif">
 </p>
 
 ## Download link
 
-- Android
+- [Android Version](https://github.com/Ayush-Rajniwal/Weatheon-ReactNative-WeatherApp/releases/download/1.0.0/Weatheon_v1.0.0.apk)
 
 ## About App
 
