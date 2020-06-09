@@ -1,0 +1,26 @@
+{
+  "expo": {
+    "name": "Weatheon",
+    "slug": "snack-f5ea142a-6081-4ce4-a364-b09b0a059685",
+    "platforms": ["ios", "android", "web"],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.ayushRajniwal.weather",
+      "versionCode": 1
+    }
+  }
+}
