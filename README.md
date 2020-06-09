@@ -1,11 +1,26 @@
-# Sample Snack app
+# Weatheon - React Native Weather App
 
-Open the `App.js` file to start writing some code. You can preview the changes directly on your phone or tablet by clicking the **Run** button or use the simulator by clicking **Tap to Play**. When you're done, click **Save** and share the link!
+<p align="center">
+  <img width="720" heigh="1520" src="./static/preview.gif">
+</p>
 
-When you're ready to see everything that Expo provides (or if you want to use your own editor) you can **Export** your project and use it with [expo-cli](https://docs.expo.io/versions/latest/introduction/installation.html).
+## Download link
 
-All projects created in Snack are publicly available, so you can easily share the link to this project via link, or embed it on a web page with the **Embed** button.
+- Android
 
-If you're having problems, you can tweet to us [@expo](https://twitter.com/expo) or ask in our [forums](https://forums.expo.io).
+## About App
 
-Snack is Open Source. You can find the code on the [GitHub repo](https://github.com/expo/snack-web).
+- Current weather of any valid city. The Weather update include current temperature, humidity and wind speed.
+- It uses **openweathermap API** for fething current weather.
+- Tap on `Location name` to change the city.
+- Double tap to refresh the data.
+- Remeber your last search, on closing the app.
+
+## How to build and test
+
+1. Clone the repo.
+2. `npm install` to install dependencies.
+3. Open `Main.js` in `components` folder.
+4. Assign your `openweathermap API key` to `const API_KEY`. Get it from [here](https://openweathermap.org/).
+5. `npm run` to test.
+6. `expo build:android` to build for android. (You can definitely build for iOS as well but I haven't tested).
