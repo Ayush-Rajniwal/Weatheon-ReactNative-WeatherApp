@@ -52,6 +52,8 @@ class Main extends Component {
           humidity: res.main.humidity
         });
         this.setState({ snackbar: false });
+        console.log("Saving data " + this.state.loc);
+
         _storeData('loc', res.name);
       })
       .catch((err) => console.log(err));
@@ -59,11 +61,11 @@ class Main extends Component {
 
   componentDidMount() {
     _retrieveData('loc').then((val) => {
-      // console.log("Reading loc from storage " + val);
+      console.log("Reading loc from storage " + val);
       if (val === null)
         this.setState({ loc: "Muradnagar" }, this.updateData);
       else
-        this.setState({ loc: val }, this.updateData);
+        this.setState({ locTemp: val, loc: val }, this.updateData);
     });
   }
 
