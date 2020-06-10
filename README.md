@@ -8,7 +8,7 @@ A minimal weather app crafted using React Native.
 
 ## Download link
 
-- [Android Version](https://github.com/Ayush-Rajniwal/Weatheon-ReactNative-WeatherApp/releases/download/1.0.0/Weatheon_v1.0.0.apk)
+- [Android Version](https://github.com/Ayush-Rajniwal/Weatheon-ReactNative-WeatherApp/releases/download/1.0.0/Weatheon.apk)
 
 ## About App
 
