@@ -13,6 +13,7 @@ class Main extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      locTemp: "Muradnagar",
       temp: 0,
       loc: 'Muradnagar',
       weatherType: 'Sunny',
@@ -33,12 +34,16 @@ class Main extends Component {
     // console.log(this.state.loc);
     this.setState({ snackbar: true })
     fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${this.state.loc}&appid=${API_KEY}&units=metric`
+      `http://api.openweathermap.org/data/2.5/weather?q=${this.state.locTemp}&appid=${API_KEY}&units=metric`
     )
       .then((res) => res.json())
       .then((res) => {
         // console.log("Fetching Result");
-
+        if (res.cod === "404") {
+          alert(res.message);
+          this.setState({ snackbar: false })
+          return
+        }
         this.setState({
           temp: Math.round(res.main.temp),
           loc: res.name,
@@ -126,7 +131,6 @@ class Main extends Component {
             visible={this.state.snackbar}
             actionHandler={() => { this.setState({ snackbar: false }) }}
             actionText="Hide"
-            //SnackBar visibility control
             textMessage="Updating Weather"
           />
           <Prompt
@@ -138,9 +142,11 @@ class Main extends Component {
                 promptVisible: !this.state.promptVisible
               })
             }
+            submitText="Search"
             onSubmit={(text) => {
+              if (text.length === 0) return; //Empty input
               this.setState({
-                loc: text,
+                locTemp: text,
                 promptVisible: !this.state.promptVisible
               }, this.updateData);
             }
